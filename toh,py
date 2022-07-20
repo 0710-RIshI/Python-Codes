@@ -1,0 +1,13 @@
+def toh(n,a,b,c):
+    if n==2:
+        print(f'move from {a} to {b}')
+        print(f'move from {a} to {c}')
+        print(f'move from {b} to {c}')
+    else:
+        toh(n-1,a,c,b)
+        print(f'move from {a} to {c}')
+        toh(n-1,b,a,c)
+
+toh(4,'a','b','c')
+
+
